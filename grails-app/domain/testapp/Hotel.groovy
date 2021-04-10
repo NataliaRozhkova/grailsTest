@@ -8,8 +8,11 @@ class Hotel {
 
     static  constraints = {
         name maxSize: 255, blank: false, unique: true, nullable: false
-        stars size: 1..5, blank: false, nullable: false
+        stars blank: false, nullable: false
         webPage url:true, nullable:true
+        stars validator: {
+            if (it > 5 || it < 1) return ['ERROR value']
+        }
     }
 
     Hotel(String name, Country country, int stars, String webPage) {
