@@ -48,7 +48,9 @@
                             </td>
                             <td> ${hotel.stars}</td>
                             <td>
-                               <a href="${hotel.webPage}" > Перейти на сайт</a>
+                                <g:if test="${hotel.webPage}">
+                                   <a href="${hotel.webPage}" > Перейти на сайт</a>
+                                </g:if>
                             </td>
                             <td>
                                 <a href="/country/show/${hotel.country.id}" > ${hotel.country.name}</a>

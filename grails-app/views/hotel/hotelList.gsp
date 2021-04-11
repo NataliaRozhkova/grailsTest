@@ -26,15 +26,17 @@
                 <li><a href="/hotel/search" class="create">Новый поиск</a></li>
             </ul>
         </div>
+
+
+    <g:if test="${!hotelList.isEmpty()}">
+
         <div id="list-hotel" class="content scaffold-list" role="main">
-            <h1>Список отелей</h1>
+            <h1>Найдено ${hotelList.size}</h1>
             <div class="lead">
                 <table>
                     <tr>
-                        <th>Количество звезд</th>
+                        <th>Звездность</th>
                         <th>Название</th>
-                        <th>Сайт</th>
-                        <th>Страна</th>
 
                     </tr>
 
@@ -44,12 +46,10 @@
                             <td> ${hotel.stars}</td>
                             <td>
                                 <a href="/hotel/show/${hotel.id}" > ${hotel.name}</a>
-                            </td>
-                            <td>
-                               <a href="${hotel.webPage}" > Перейти на сайт</a>
-                            </td>
-                            <td>
-                                <a href="/country/show/${hotel.country.id}" > ${hotel.country.name}</a>
+                                <br>
+                                <g:if test="${hotel.webPage}">
+                                    <a href="${hotel.webPage}" > Перейти на сайт</a>
+                                </g:if>
                             </td>
 
                         </tr>
@@ -57,6 +57,11 @@
                 </table>
             </div>
         </div>
+    </g:if>
+    <g:if test="${hotelList.isEmpty()}">
+       <h1> По Вашему запросу ничего не найдено </h1>
+    </g:if>
+
 
 <script type="text/javascript" src="./Hotel List_files/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="./Hotel List_files/bootstrap.js"></script>

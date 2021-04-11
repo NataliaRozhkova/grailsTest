@@ -16,10 +16,8 @@ class HotelController {
 
     def hotelList() {
 
-
-            List<Hotel> list = (params.long('country.id') == null) ? hotelService.findByName(params['name'])
-                    : hotelService.findByName(params['name']).stream().filter { c -> c.country.id == params.long('country.id') }.toArray()
-
+        List<Hotel> list = (params.long('country.id') == null) ? hotelService.findByName(params['name'])
+                : hotelService.findByName(params['name']).stream().filter { c -> c.country.id == params.long('country.id') }.toArray()
 
         [hotelList: list]
     }

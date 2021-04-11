@@ -25,8 +25,9 @@
     <div>
         <g:form name="myForm" url="[action:'hotelList',controller:'hotel']">
             <div class="row">
-                <input class="form-control" name="name" placeholder="введите название" required type="text">
+                <input class="form-control" name="name" placeholder="Введите название" required type="text">
             </div>
+            <br>
             <div class="row">
                 <select class="form-control" id="country" name="country.id">
                     <option value="">Выберите страну</option>
