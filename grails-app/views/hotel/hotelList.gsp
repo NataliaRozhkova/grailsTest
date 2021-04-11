@@ -48,7 +48,7 @@
                                 <a href="/hotel/show/${hotel.id}" > ${hotel.name}</a>
                                 <br>
                                 <g:if test="${hotel.webPage}">
-                                    <a href="${hotel.webPage}" > Перейти на сайт</a>
+                                    <a href="${hotel.webPage}" target="_blank"> Перейти на сайт</a>
                                 </g:if>
                             </td>
 
@@ -67,8 +67,6 @@
 <script type="text/javascript" src="./Hotel List_files/bootstrap.js"></script>
 <script type="text/javascript" src="./Hotel List_files/popper.min.js"></script>
 <script type="text/javascript" src="./Hotel List_files/application.js"></script>
-
-
 
 
 </body></html>
