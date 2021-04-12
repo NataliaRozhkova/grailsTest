@@ -11,7 +11,7 @@ class Hotel {
         stars blank: false, nullable: false, validator: {
             if (it > 5 || it < 1) return ['ERROR value']
         }
-        webPage url: true, nullable: true, matches: "http(.*)"
+        webPage url: true, nullable: true, matches: "^(http|https)://(.*)"
 
 
     }
