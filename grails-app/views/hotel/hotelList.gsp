@@ -21,15 +21,13 @@
 
 <body>
 
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a href="/hotel/search" class="create">Новый поиск</a></li>
-            </ul>
-        </div>
-
+    <div class="nav" role="navigation">
+        <ul>
+            <li><a href="/hotel/search" class="create">Новый поиск</a></li>
+        </ul>
+    </div>
 
     <g:if test="${!hotelList.isEmpty()}">
-
         <div id="list-hotel" class="content scaffold-list" role="main">
             <h1>Найдено ${hotelList.size}</h1>
             <div class="lead">
@@ -37,11 +35,9 @@
                     <tr>
                         <th>Звездность</th>
                         <th>Название</th>
-
                     </tr>
 
                     <g:each var="hotel" in="${hotelList}">
-
                         <tr class="even">
                             <td> ${hotel.stars}</td>
                             <td>
@@ -51,7 +47,6 @@
                                     <a href="${hotel.webPage}" target="_blank"> Перейти на сайт</a>
                                 </g:if>
                             </td>
-
                         </tr>
                     </g:each>
                 </table>
