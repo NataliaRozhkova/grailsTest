@@ -7,8 +7,9 @@ class Hotel {
     String webPage
 
     static constraints = {
-        name maxSize: 255, blank: false, unique: true, nullable: false
-        stars blank: false, nullable: false, validator: {
+        name maxSize: 255, blank: false, nullable: false
+        name (unique: ['name', 'country'])
+        stars blankname: false, nullable: false, validator: {
             if (it > 5 || it < 1) return ['ERROR value']
         }
         webPage url: true, nullable: true, matches: "^(http|https)://(.*)"
