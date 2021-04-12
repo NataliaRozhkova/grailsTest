@@ -13,6 +13,11 @@ class HotelController {
     def search() {
         [countryList: Country.list()]
     }
+    def delete() {
+        hotelService.delete(params.long('id'))
+        redirect(controller: "hotel", action: "index")
+
+    }
 
     def hotelList() {
 

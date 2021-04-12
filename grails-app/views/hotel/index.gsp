@@ -49,7 +49,7 @@
                             <td> ${hotel.stars}</td>
                             <td>
                                 <g:if test="${hotel.webPage}">
-                                   <a href="${hotel.webPage}" > Перейти на сайт</a>
+                                   <a href="${hotel.webPage}" target="_blank"> Перейти на сайт</a>
                                 </g:if>
                             </td>
                             <td>
