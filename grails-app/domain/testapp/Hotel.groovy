@@ -13,8 +13,6 @@ class Hotel {
             if (it > 5 || it < 1) return ['ERROR value']
         }
         webPage url: true, nullable: true, matches: "^(http|https)://(.*)"
-
-
     }
 
     Hotel(String name, Country country, int stars, String webPage) {
