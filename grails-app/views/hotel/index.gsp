@@ -61,7 +61,9 @@
                         <a href="/hotel/edit/${hotel.id}"> Редактировать</a>
                     </td>
                     <td>
-                        <a href="/hotel/delete/${hotel.id}"> Удалить</a>
+                        <form action="/hotel/delete/${hotel.id}" method="post">
+                            <input class="delete" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
+                        </form>
                     </td>
                 </tr>
             </g:each>
