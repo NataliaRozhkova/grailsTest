@@ -48,7 +48,9 @@
                         <a href="/country/edit/${country.id}"> Редактировать </a>
                     </td>
                     <td>
-                        <a href="/country/delete/${country.id}"> Удалить </a>
+                        <form action="/country/delete/${country.id}" method="post">
+                            <input class="delete" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
+                        </form>
                     </td>
                 </tr>
             </g:each>
