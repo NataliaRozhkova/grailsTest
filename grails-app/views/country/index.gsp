@@ -49,7 +49,7 @@
                     </td>
                     <td>
                         <form action="/country/delete/${country.id}" method="post">
-                            <input class="delete" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
+                            <input class="delete" type="submit" value="Delete" onclick="return confirm('Are you sure? All hotels from this country will de removed ');">
                         </form>
                     </td>
                 </tr>
